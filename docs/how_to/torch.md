@@ -2,11 +2,11 @@
 
 This tutorial demonstrates how to use MXNet as front-end to two of Torch's major functionalities:
 
-* 1) Compile MXNet with Torch support.
+* Compile MXNet with Torch support.
 
-* 2) Call Torch's tensor mathematical functions with MXNet.NDArray.
+* Call Torch's tensor mathematical functions with MXNet.NDArray.
 
-* 3) Embed Torch's neural network modules (layers) into MXNet's symbolic graph.
+* Embed Torch's neural network modules (layers) into MXNet's symbolic graph.
 
 ## Compile with Torch
 * First install Torch following [official guide](http://torch.ch/docs/getting-started.html).

@@ -87,7 +87,7 @@ Documents
 Testcases
 ---------
 * All the test cases are in [tests](https://github.com/dmlc/mxnet/tree/master/tests)
-* We use python nose for python test cases and gtest for c++ unit tests.
+* We use python nose for python test cases and gtest for c++ unit tests. To run the python tests, navigate to tests/python/unittest and run nosetests.
 
 Examples
 --------
@@ -138,7 +138,7 @@ make roxygen
 
 ### Rmarkdown Vignettes
 Rmarkdown vignettes are placed in [R-package/vignettes](https://github.com/dmlc/mxnet/tree/master/R-package/vignettes)
-These Rmarkdown files are not compiled. We host the compiled version on [doc/R-package](R-package)
+We host the compiled vignettes on [Tutorials](http://mxnet.io/tutorials/#r-tutorials)
 
 The following steps are followed to add a new Rmarkdown vignettes:
 - Add the original rmarkdown to ```R-package/vignettes```

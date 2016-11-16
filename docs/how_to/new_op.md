@@ -4,13 +4,9 @@ This note will walk you through the process of creating new MXNet operations (or
 
 We try to do our best to provide high speed operators for most common use cases. However, if you do find yourself in need of custom layers, like a novel loss for your research, you have two options:
 
-* ~~(Deprecated) Use native language and it's matrix library (e.g. numpy in Python). This requires least effort and knowledge of MXNet. But impairs performance as it is CPU based.~~
+* Use CustomOp to write new operators in front end language (i.e. Python) that runs on CPU or GPU. Depending on your implementation, this can range from very fast to very slow.
 
-* ~~(Deprecated) Use native language, mxnet.rtc and mxnet.ndarray. This gives you most of the performance of 3) and most of the convenience of 1), but requires more knowledge of MXNet. You can write CUDA kernels in python and compile with during runtime.~~
-
-* 1) Use CustomOp to write new operators in front end language (i.e. Python) that runs on CPU or GPU. Depending on your implementation, this can range from very fast to very slow.
-
-* 2) Use C++/MShadow(CUDA). This can be difficult if you are not familiar with MXNet, mashadow or Cuda, but it will give you the best performance.
+* Use C++/MShadow(CUDA). This can be difficult if you are not familiar with MXNet, mashadow or Cuda, but it will give you the best performance.
 
 ## CustomOp
 Implementing an operator in Python is similar to creating one in C++ but simpler. Let's create a softmax operator for example. We start by subclassing `mxnet.operator.CustomOp` and then override a few methods:
